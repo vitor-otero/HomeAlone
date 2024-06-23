@@ -1,0 +1,357 @@
+{
+	"info": {
+		"_postman_id": "4fc9855f-03ca-447d-9560-000898c463fe",
+		"name": "HomeAlone",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25055423"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"username\": \"newuser1\",\n        \"password\": \"password123\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"username\": \"newuser1\",\n        \"password\": \"password123\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Needs",
+			"item": [
+				{
+					"name": "Get *",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoidXNlciIsImp0aSI6ImMwODkxZTgyLTIyZWYtNGNjOC1hNThhLThlZDJmMzg1ZGE4NCIsImV4cCI6MTcxOTEwNDMzMywiaXNzIjoieW91cl9pc3N1ZXJfaGVyZSIsImF1ZCI6InlvdXJfaXNzdWVyX2hlcmUifQ.AzdVffgivwngEFYpCiFdQjoOOSmwvf88HU-Yli3He3Y"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5001/api/needs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"needs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add *",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoidXNlciIsImp0aSI6ImMwODkxZTgyLTIyZWYtNGNjOC1hNThhLThlZDJmMzg1ZGE4NCIsImV4cCI6MTcxOTEwNDMzMywiaXNzIjoieW91cl9pc3N1ZXJfaGVyZSIsImF1ZCI6InlvdXJfaXNzdWVyX2hlcmUifQ.AzdVffgivwngEFYpCiFdQjoOOSmwvf88HU-Yli3He3Y"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"description\": \"Buy groceries\",\n        \"isMet\": false,\n        \"percentageMet\": 0\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/needs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"needs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update *",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoidXNlciIsImp0aSI6ImMwODkxZTgyLTIyZWYtNGNjOC1hNThhLThlZDJmMzg1ZGE4NCIsImV4cCI6MTcxOTEwNDMzMywiaXNzIjoieW91cl9pc3N1ZXJfaGVyZSIsImF1ZCI6InlvdXJfaXNzdWVyX2hlcmUifQ.AzdVffgivwngEFYpCiFdQjoOOSmwvf88HU-Yli3He3Y"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"description\": \"Buy groceries and cleaning supplies\",\n        \"isMet\": true,\n        \"percentageMet\": 100\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/needs/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"needs",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete *",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoidXNlciIsImp0aSI6ImMwODkxZTgyLTIyZWYtNGNjOC1hNThhLThlZDJmMzg1ZGE4NCIsImV4cCI6MTcxOTEwNDMzMywiaXNzIjoieW91cl9pc3N1ZXJfaGVyZSIsImF1ZCI6InlvdXJfaXNzdWVyX2hlcmUifQ.AzdVffgivwngEFYpCiFdQjoOOSmwvf88HU-Yli3He3Y"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5001/api/needs/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"needs",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payments",
+			"item": [
+				{
+					"name": "Get *",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoidXNlciIsImp0aSI6IjA1NWEyOWEwLTcwMDctNDU2NC05NzNkLTAyOTBlZDRjNWNiZiIsImV4cCI6MTcxOTExMDE3MCwiaXNzIjoieW91cl9pc3N1ZXJfaGVyZSIsImF1ZCI6InlvdXJfaXNzdWVyX2hlcmUifQ.2AfD0kgK03upn0MeZZ80esALU70XaPCWCnStm6IRkxU"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5001/api/payments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add *",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoidXNlciIsImp0aSI6ImM5YjBmNWE1LWNjZmItNDQ4NS05YzExLTUwZGQ4M2U2N2U1OSIsImV4cCI6MTcxOTEwNjM2NCwiaXNzIjoieW91cl9pc3N1ZXJfaGVyZSIsImF1ZCI6InlvdXJfaXNzdWVyX2hlcmUifQ.DiuXKdTXgWCihVUnFdHB3XtGOF7HnRDt_p3UBux3Dqg"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"description\": \"Electricity bill\",\n        \"amount\": 100.50,\n        \"dueDate\": \"2024-07-01\",\n        \"isPaid\": false\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/payments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"payments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update *",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoidXNlciIsImp0aSI6ImMwODkxZTgyLTIyZWYtNGNjOC1hNThhLThlZDJmMzg1ZGE4NCIsImV4cCI6MTcxOTEwNDMzMywiaXNzIjoieW91cl9pc3N1ZXJfaGVyZSIsImF1ZCI6InlvdXJfaXNzdWVyX2hlcmUifQ.AzdVffgivwngEFYpCiFdQjoOOSmwvf88HU-Yli3He3Y"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"description\": \"Electricity bill\",\n        \"amount\": 150.75,\n        \"due_date\": \"2024-07-01\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/payments/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"payments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete *",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoidXNlciIsImp0aSI6ImYyZTRhMDg0LTNkOTEtNDIwNi05ZWVkLTg3MjMwMGUzMTM3NiIsImV4cCI6MTcxOTEwNTg0MSwiaXNzIjoieW91cl9pc3N1ZXJfaGVyZSIsImF1ZCI6InlvdXJfaXNzdWVyX2hlcmUifQ.9c0hlsCMwn-SbzVLzHhW4oTUX3vQY96S3eB8rM8e8MY"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5001/api/payments/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"payments",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "Token",
+			"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoidXNlciIsImp0aSI6IjgwZWZkYjBjLTg1ODQtNDk0ZC04M2NkLTRiZmIyY2I1Yzk0NyIsImV4cCI6MTcxOTEwMjcxOCwiaXNzIjoieW91cl9pc3N1ZXJfaGVyZSIsImF1ZCI6InlvdXJfaXNzdWVyX2hlcmUifQ.d38lXxQ1ocrTKHSf1VHw5CJCKULNtUNE3PtXgrLRN1w"
+		}
+	]
+}
