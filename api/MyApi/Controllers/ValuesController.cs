@@ -10,8 +10,8 @@ namespace MyApi.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        private readonly string _connectionString = "Server=db;Database=mydatabase;User=myuser;Password=mypassword;";
-
+        private readonly string _connectionString = AppConfig.DBConnection;
+        
         [HttpGet]
         public IActionResult Get()
         {

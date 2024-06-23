@@ -11,8 +11,8 @@ namespace MyApi.Controllers
     [Authorize]
     public class SharingController : ControllerBase
     {
-        private readonly string _connectionString = "Server=db;Database=mydatabase;User=myuser;Password=mypassword;";
-
+        private readonly string _connectionString = AppConfig.DBConnection;
+        
         [HttpPost("share-all")]
         public IActionResult ShareAllData([FromBody] ShareAllRequest shareAllRequest)
         {
