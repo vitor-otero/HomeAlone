@@ -29,6 +29,7 @@ CREATE TABLE IF NOT EXISTS Pending (
     user_id INT,
     description VARCHAR(255),
     due_date DATE,
+    is_completed BOOLEAN DEFAULT FALSE,
     FOREIGN KEY (user_id) REFERENCES Users(id)
 );
 
